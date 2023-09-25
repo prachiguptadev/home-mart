@@ -1,19 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {updateCart} from "../utils/cartUtils"
+import { updateCart } from "../utils/cartUtils";
 
 const initialState = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : {
       cartItems: [],
-      itemsPrice: 0,
-      shippingPrice: 0,
-      taxPrice: 0,
-      totalPrice: 0,
+      shippingAddress: {},
+      paymentMethod: "PayPal",
+      itemsPrice: 0, // Initialize itemsPrice to 0
     };
-
-const addDecimals = (num) => {
-  return (Math.round(num * 100) / 100).toFixed(2);
-};
 
 const cartSlice = createSlice({
   name: "cart",
@@ -30,16 +25,46 @@ const cartSlice = createSlice({
       } else {
         state.cartItems = [...state.cartItems, item];
       }
-     
-      return updateCart(state)
+
+      state.itemsPrice = state.cartItems.reduce(
+        (acc, currentItem) => acc + currentItem.price * currentItem.qty,
+        0
+      );
+
+      return updateCart(state);
     },
 
-      removeFromCart: (state, action) => {
-        state.cartItems = state.cartItems.filter((x) => x._id !== action.payload)
-        return updateCart(state)
-      }
+    removeFromCart: (state, action) => {
+      state.cartItems = state.cartItems.filter((x) => x._id !== action.payload);
 
+      state.itemsPrice = state.cartItems.reduce(
+        (acc, currentItem) => acc + currentItem.price * currentItem.qty,
+        0
+      );
+
+      return updateCart(state);
+    },
+
+    saveShippingAddress: (state, action) => {
+      state.shippingAddress = action.payload;
+      return updateCart(state);
+    },
+
+    savePaymentMethod: (state, action) => {
+      state.paymentMethod = action.payload;
+      return updateCart(state);
+    },
+    clearCartItems: (state, action) => {
+      state.cartItems = [];
+      return updateCart(state);
+    },
   },
 });
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  saveShippingAddress,
+  savePaymentMethod,
+  clearCartItems,
+} = cartSlice.actions;
 export default cartSlice.reducer;
