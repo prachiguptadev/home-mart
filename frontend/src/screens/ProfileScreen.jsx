@@ -97,7 +97,7 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type="submit" variant="primary">
+          <Button type="submit" variant="primary" className="custom-hover-btn">
             Update
           </Button>
           {loadingUpdateProfile && <Loader />}
@@ -145,7 +145,7 @@ const ProfileScreen = () => {
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
-                      <Button className="btn-sm" variant="light">
+                      <Button className="btn-sm custom-hover-btn" variant="light">
                         Details
                       </Button>
                     </LinkContainer>

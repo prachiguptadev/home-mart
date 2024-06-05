@@ -70,7 +70,7 @@ const ShippingScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type="submit" variant="primary" className="my-2">
+        <Button type="submit" variant="primary" className="my-2 custom-hover-btn">
           Continue
         </Button>
       </Form>

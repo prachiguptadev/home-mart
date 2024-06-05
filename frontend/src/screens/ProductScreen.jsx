@@ -68,7 +68,7 @@ const ProductScreen = () => {
   };
   return (
     <>
-      <Link className="btn btn-light my-3" to="/">
+      <Link className="btn btn-light my-3 custom-hover-btn" to="/">
         Go Back
       </Link>
 
@@ -80,7 +80,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
-        <Meta title={product?.name}/>
+          <Meta title={product?.name} />
           <Row>
             <Col md={5}>
               <Image src={product?.image} alt={product?.name} fluid />
@@ -96,9 +96,9 @@ const ProductScreen = () => {
                     text={`${product?.numReviews} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Price: ${product?.price}</ListGroup.Item>
+                <ListGroup.Item>Price: ₹{product?.price}</ListGroup.Item>
                 <ListGroup.Item>
-                  Description: ${product?.description}
+                  Description: {product?.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -109,7 +109,7 @@ const ProductScreen = () => {
                     <Row>
                       <Col>Price:</Col>
                       <Col>
-                        <strong>${product?.price}</strong>
+                        <strong>₹{product?.price}</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
@@ -152,7 +152,7 @@ const ProductScreen = () => {
 
                   <ListGroup.Item>
                     <Button
-                      className="btn-block"
+                      className="btn-block custom-hover-btn"
                       type="button"
                       disabled={product?.countInStock === 0}
                       onClick={addToCartHandler}
@@ -211,6 +211,7 @@ const ProductScreen = () => {
                         disabled={loadingProductReview}
                         type="submi"
                         variant="primary"
+                        className="custom-hover-btn"
                       >
                         Submit
                       </Button>

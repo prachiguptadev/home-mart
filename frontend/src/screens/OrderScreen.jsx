@@ -103,7 +103,6 @@ const OrderScreen = () => {
     }
   };
 
-
   return isLoading ? (
     <Loader />
   ) : error ? (
@@ -118,10 +117,10 @@ const OrderScreen = () => {
             <ListGroup.Item>
               <h2>Shipping</h2>
               <p>
-                <strong>Name: </strong> {order.user.name}
+                <strong>Name: </strong> {order?.user?.name}
               </p>
               <p>
-                <strong>Email: </strong> {order.user.email}
+                <strong>Email: </strong> {order?.user?.email}
               </p>
               <p>
                 <strong>Address: </strong> {order.shippingAddress.address},{" "}
@@ -162,7 +161,7 @@ const OrderScreen = () => {
                       <Link to={`/product/${item.product}`}>{item.name}</Link>
                     </Col>
                     <Col md={4}>
-                      {item.qty} x ${item.price} = ${item.qty * item.price}
+                      {item.qty} x ₹{item.price} = ₹{item.qty * item.price}
                     </Col>
                   </Row>
                 </ListGroup.Item>
@@ -179,21 +178,21 @@ const OrderScreen = () => {
               <ListGroup.Item>
                 <Row>
                   <Col>Items</Col>
-                  <Col>${parseFloat(order.itemsPrice).toFixed(2)}</Col>
+                  <Col>₹{parseFloat(order.itemsPrice).toFixed(2)}</Col>
                 </Row>
 
                 <Row>
                   <Col>Shipping</Col>
-                  <Col>${order.shippingPrice}</Col>
+                  <Col>₹{order.shippingPrice}</Col>
                 </Row>
                 <Row>
                   <Col>Tax</Col>
-                  <Col>${parseFloat(order.taxPrice).toFixed(2)}</Col>
+                  <Col>₹{parseFloat(order.taxPrice).toFixed(2)}</Col>
                 </Row>
 
                 <Row>
                   <Col>Total</Col>
-                  <Col>${parseFloat(order.totalPrice).toFixed(2)}</Col>
+                  <Col>₹{parseFloat(order.totalPrice).toFixed(2)}</Col>
                 </Row>
               </ListGroup.Item>
               {/* PAY ORDER PLACEHOLDER */}
@@ -232,7 +231,7 @@ const OrderScreen = () => {
                   <ListGroup.Item>
                     <Button
                       type="button"
-                      className="btn btn-block"
+                      className="btn btn-block custom-hover-btn"
                       onClick={deliverHandler}
                     >
                       Mark As Delivered

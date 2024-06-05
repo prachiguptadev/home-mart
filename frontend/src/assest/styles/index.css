@@ -1,53 +1,123 @@
 main {
-    min-height: 80vh;
-  }
-  
-  .rating span {
-    margin: 0.1rem;
-  }
-  
-  .rating svg {
-    color: #f8e825;
-  }
-  
-  .rating-text {
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding-left: 0.5rem;
-  }
-  
-  .product-title {
-    height: 2.5em; /* Set a fixed height */
-    overflow: hidden; /* Hide overflow content */
-    text-overflow: ellipsis; /* Add ellipsis for long text */
-    white-space: nowrap; /* Prevent wrapping */
-  }
-  
-  table td,
-  table th {
-    text-align: center;
-  }
-  
-  .review {
-    margin-top: 30px;
-  }
-  
-  .review h2 {
-    font-size: 24px;
-    background: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  .review button {
-    margin-top: 10px;
-  }
-  
-  .carousel-caption {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-  }
+  min-height: 80vh;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  color: #f8e825;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+.product-title {
+  height: 2.5em; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+table td,
+table th {
+  text-align: center;
+}
+
+.review {
+  margin-top: 30px;
+}
+
+.review h2 {
+  font-size: 24px;
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.review button {
+  margin-top: 10px;
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* custom CSS */
+
+.custom-hover:hover {
+  color: rgba(245, 131, 31, 0.813);
+}
+
+.custom-hover-btn {
+  background-color: #f5821f;
+  color: white;
+  border: none;
+}
+
+.custom-hover-btn:hover {
+  background-color: rgba(245, 131, 31, 0.813);
+  color: white;
+}
+
+.heading-color {
+  color: #6f7374;
+}
+
+.product-card {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+}
+.edit-delete {
+  margin-left: 10px;
+}
+
+:root {
+  --bs-body-font-family: "Work Sans", sans-serif;
+}
+
+.btn-primary {
+  --bs-btn-active-bg: #f5821f;
+}
+
+.navbar-nav {
+  --bs-nav-link-hover-color: rgba(245, 131, 31, 0.813);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #f5821f;
+}
+
+.nav-link,
+.dropdown-toggle {
+  --bs-nav-link-color: #f5821f;
+}
+
+.navbar-dark {
+  --bs-navbar-active-color: rgba(245, 131, 31, 0.813);
+}
+
+.btn-outline-light {
+  --bs-btn-active-bg: #f5821f;
+  --bs-btn-active-color: #ffffff;
+}
+
+.btn-light {
+  --bs-btn-active-bg: #f5821f;
+  --bs-btn-active-color: #ffffff;
+}
+
+.dropdown-menu{
+  --bs-dropdown-divider-bg:green;
+}

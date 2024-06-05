@@ -68,7 +68,7 @@ export const LoginScreen = () => {
         <Button
           type="submit"
           variant="primary"
-          className="my-3"
+          className="my-3 custom-hover-btn"
           disabled={isLoading}
         >
           Sign In
@@ -90,4 +90,3 @@ export const LoginScreen = () => {
 };
 
 export default LoginScreen;
-

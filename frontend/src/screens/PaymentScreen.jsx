@@ -50,7 +50,7 @@ const PaymentScreen = () => {
           </Col>
         </Form.Group>
 
-        <Button type="submit" variant="primary">
+        <Button type="submit" variant="primary" className="custom-hover-btn">
             Continue
         </Button>
       </Form>
