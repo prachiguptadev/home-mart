@@ -84,6 +84,10 @@ table th {
 
 :root {
   --bs-body-font-family: "Work Sans", sans-serif;
+  --bs-btn-active-bg: #f5821f;
+  --bs-btn-active-color: #ffffff;
+  --bs-nav-link-color: #f5821f;
+
 }
 
 .btn-primary {
@@ -120,4 +124,9 @@ table th {
 
 .dropdown-menu{
   --bs-dropdown-divider-bg:green;
+}
+
+.btn:disabled{
+  background-color: var( --bs-btn-active-bg);
+  color: var(--bs-btn-active-color);
 }

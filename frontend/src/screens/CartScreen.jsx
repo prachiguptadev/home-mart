@@ -101,7 +101,8 @@ const CartScreen = () => {
             <ListGroup.Item>
               <Button
                 type='button'
-                className='custom-hover-btn'
+                bg="primary"
+                className='custom-hover-btn '
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >

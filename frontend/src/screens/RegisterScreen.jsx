@@ -103,7 +103,7 @@ export const RegisterScreen = () => {
         <Button
           type="submit"
           variant="primary"
-          className="my-3 custom-hover-btn"
+          className="my-3 custom-hover-btn btn-light btn-outline-light"
           disabled={isLoading}
         >
           Register
