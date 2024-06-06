@@ -4,7 +4,7 @@ This is an eCommerce web application created with M(ongoDb)E(xpress)R(eact)N(ode
 ## Live Version: [https://homemart.prachigupta.tech/](https://homemart.prachigupta.tech/)
 ## Homepage visuals
 
-![HomeMart](![home-mart](https://github.com/prachiguptadev/home-mart/assets/117148255/0a33253e-d98f-4e26-871c-467e1855e7e3))
+![home-mart](https://github.com/prachiguptadev/home-mart/assets/117148255/0a33253e-d98f-4e26-871c-467e1855e7e3)
 
 ## Features
 
