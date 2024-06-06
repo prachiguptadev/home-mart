@@ -37,8 +37,3 @@ This is an eCommerce web application created with M(ongoDb)E(xpress)R(eact)N(ode
 * Prettier
 * Eslint
 
-## Acknowledgments
-* Github:  [@bradtraversy](https://github.com/bradtraversy)
-
-
-* Website: [traversy-media](https://www.traversymedia.com/)
